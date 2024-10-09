@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# チュートリアル：三目並べ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## プロジェクトのスケールトン作成
+
+```bash
+# https://github.com/facebook/create-react-app
+npx create-react-app tutorial-tic-tac-toe
+```
 
 ## Available Scripts
 
