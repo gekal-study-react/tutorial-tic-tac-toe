@@ -30,21 +30,15 @@
                 "yzhang.markdown-all-in-one"
             ]
         },
-        "codespaces": {},
-        "jetbrains": {
-            "settings": {
-                "Docker:app:DockerSettings.dockerPath": "/usr/local/bin/docker",
-                "Git4Idea:app:Git-Application-Settings.use_credential_helper": true,
-                "com.intellij:app:HttpConfigurable.use_proxy_pac": true
-            }
-        }
+        "codespaces": {}
     },
     // https://containers.dev/implementors/json_reference/#variables-in-devcontainerjson
     "containerEnv": {
         "LOCAL_USERNAME": "${localEnv:USERNAME}"
     },
     "mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/home/gekal/.ssh,type=bind,consistency=cached"
+        "source=${localEnv:HOME}/.ssh,target=/home/gekal/.ssh,type=bind,consistency=cached",
+        "source=${localWorkspaceFolder}/.devcontainer/.bash_aliases,target=/home/gekal/.bash_aliases,type=bind,consistency=cached"
     ],
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     "remoteUser": "gekal",
